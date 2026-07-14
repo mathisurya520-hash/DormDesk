@@ -1,0 +1,6 @@
+target
+node_modules
+.git
+.gitignore
+apache-maven-3.9.6
+maven.zip
