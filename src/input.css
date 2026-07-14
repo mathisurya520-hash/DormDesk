@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@source "./main/webapp/**/*.jsp";
+@source "./main/webapp/**/*.html";
+@source "./main/webapp/assets/js/**/*.js";

@@ -1,0 +1,90 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary: #059669; /* green 600 */
+    --primary-hover: #047857; /* green 700 */
+    --bg-light: #F0FDF4; /* Light green */
+    --bg-dark: #0f172a;
+    --text-light: #1e293b;
+    --text-dark: #F8FAFC;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.18);
+    --glass-bg-dark: rgba(15, 23, 42, 0.7);
+    --glass-border-dark: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Theme (Default) */
+body.light-theme {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+/* Glassmorphism Classes */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    transition: background 0.3s, border 0.3s;
+}
+
+body.dark-theme .glass {
+    background: var(--glass-bg-dark);
+    border: 1px solid var(--glass-border-dark);
+    color: var(--text-dark);
+}
+
+body.dark-theme .glass input, body.dark-theme .glass select, body.dark-theme .glass textarea {
+   background-color: rgba(0,0,0,0.2) !important;
+   color: white !important;
+   border-color: rgba(255,255,255,0.1);
+}
+
+body.dark-theme .glass h1, body.dark-theme .glass h2, body.dark-theme .glass h3, body.dark-theme .glass p {
+    color: var(--text-dark) !important;
+}
+
+body.dark-theme td, body.dark-theme th {
+    color: var(--text-dark) !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.hover-scale {
+    transition: transform 0.2s ease-in-out;
+}
+
+.hover-scale:hover {
+    transform: scale(1.02);
+}
+
+/* Custom Gradients */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #10b981 0%, #0f766e 100%);
+}
+
+#toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
